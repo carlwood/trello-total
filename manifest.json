@@ -1,13 +1,22 @@
 {
-  "name": "Getting Started Example",
+  "name": "Trello Total",
   "version": "1.0",
-  "description": "Build an Extension!",
+  "description": "Display the total count of all trello cards on a board",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "options_page": "options.html",
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://trello.com/b*"
+      ],
+      "css": [
+        "css/main.css"
+      ],
+      "js": [
+        "js/main.js"
+      ]
+    }
+  ],
   "page_action": {
     "default_popup": "popup.html",
     "default_icon": {
