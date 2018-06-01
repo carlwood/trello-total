@@ -12,6 +12,6 @@ function createDiv(count) {
 }
 
 window.onload = () => {
-  let count = card.length
+  const count = card.length
   createDiv(count)
 }
